@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decision maker</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <table>
+          <tr>
+            <h2 style="text-align: center">Шкала оцінок</h2>
+            <td>Дуже добре</td>
+            <td><input id="rating_excellent" value="10" /></td>
+          </tr>
+          <tr>
+            <td>Добре</td>
+            <td><input id="rating_good" value="8" /></td>
+          </tr>
+          <tr>
+            <td>Задовільно</td>
+            <td><input id="rating_satisfied" value="6" /></td>
+          </tr>
+          <tr>
+            <td>Погано</td>
+            <td><input id="rating_badly" value="3" /></td>
+          </tr>
+          <tr>
+            <td>Дуже погано</td>
+            <td><input id="rating_awful" value="1" /></td>
+          </tr>
+        </table>
+      </div>
+      <!-- <div>
+        <h2 style="text-align: center">Оцінка</h2>
+        <table>
+          <tr>
+            <td></td>
+            <td>Дощ</td>
+            <td>Сонце</td>
+          </tr>
+          <tr>
+            <td>Вдома</td>
+            <td>
+              <select id="home_rain_input"></select>
+            </td>
+            <td>
+              <select id="home_sun_input"></select>
+            </td>
+          </tr>
+          <tr>
+            <td>В лісі</td>
+            <td>
+              <select id="forest_rain_input"></select>
+            </td>
+            <td>
+              <select id="forest_sun_input"></select>
+            </td>
+          </tr>
+        </table>
+      </div> -->
+      <div>
+        <div style="text-align: center; margin-top: 50px">
+          <h2>Ймовірність дощу (%):</h2>
+          <input id="rain_probability_input" type="number" min="0" max="100" />
+        </div>
+        <div style="display: flex; justify-content: center">
+          <button id="decision-btn">Decision</button>
+        </div>
+        <div class="result">
+          Корисність сидіння вдома:
+          <span id="home_gain"></span>
+        </div>
+        <div class="result">
+          Корисність походу в ліс:
+          <span id="forest_gain"></span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
